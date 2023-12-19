@@ -40,24 +40,20 @@ include '../config/function.php';
                                     <tr>
                                        <th scope="col">#</th>
                                        <th scope="col">Kode Tiket</th>
-                                       <th scope="col">Total Bayar</th>
-                                       <th scope="col">Jumlah Orang</th>
-                                       <th scope="col">Status </th>
+                                       <th scope="col">Nama Bus</th>
                                        <th scope="col">Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
                                     <?php
-                                    $datas = select('tiket JOIN pemesanan ON (pemesanan.tiket_id = tiket.id_tiket)');
+                                    $datas = select('tiket JOIN bus ON (bus.id_bus = tiket.bus_id)');
                                     $i = 1;
                                     while ($data = mysqli_fetch_assoc($datas)) :
                                     ?>
                                        <tr>
                                           <th scope="row"><?= $i++ ?></th>
                                           <td><?= $data['kode_tiket'] ?></td>
-                                          <td><?= $data['total_bayar'] ?></td>
-                                          <td><?= $data['jumlah_orang'] ?></td>
-                                          <td><?= $data['status_pemesanan'] ?> </td>
+                                          <td><?= $data['nama_bus'] ?></td>
                                           <td>
                                              <a class="btn btn-warning" href='edit_tiket.php?id=<?= $data['id_tiket'] ?>'> Edit </a>
                                              

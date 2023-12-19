@@ -18,7 +18,7 @@ if ($terminal_asal == "" || $terminal_tujuan == "" || $waktu_berangkat == "" || 
 }
 
 // echo $data_query;
-$data_query = "('','41', '$bus_pilihan' , '$terminal_asal' ,'$terminal_tujuan', '$waktu_berangkat', '$harga_bus')";
+$data_query = "(null, null, '$bus_pilihan' , '$terminal_asal' ,'$terminal_tujuan', '$waktu_berangkat', '$harga_bus')";
 
 $store = insert('jadwal', $data_query);
 if ($store > 0) {

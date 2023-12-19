@@ -84,7 +84,7 @@ $data = mysqli_fetch_assoc($datas);
                                     </div>
                                  </div>
                                  <div class="d-flex">
-                                    <div class=" mb-4 mr-3"><button type="submit" class="btn btn-success"> Tambah </button></div>
+                                    <div class=" mb-4 mr-3"><button type="submit" class="btn btn-success"> Update </button></div>
                                     <div class=" mb-4"><a class="btn btn-secondary" href="index_jadwal.php"> Kembali </a></div>
                                  </div>
                               </form>

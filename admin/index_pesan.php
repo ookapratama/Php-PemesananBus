@@ -61,7 +61,6 @@ include '../config/function.php';
                                           <td>Rp. <?= number_format($data['harga'], 0, ',', '.')  ?></td>
                                           <td><?= $data['status_pemesanan'] ?> </td>
                                           <td>
-                                             <a class="btn btn-warning" href='edit_pesan.php?id=<?= $data['id_pemesanan'] ?>'> Edit </a>
                                              
                                              <a class="btn btn-danger" href='delete_pesan.php?id=<?= $data['id_pemesanan'] ?>' onclick='return confirm("Yakin ingin menghapus ?");'> Hapus </a>
                                           </td>

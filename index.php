@@ -21,13 +21,6 @@ include 'db/koneksi.php';
             <h2>Jadwal Bus Tersedia</h2>
          </div>
 
-         <!-- <ul class="filters_menu">
-            <li class="active" data-filter="*">All</li>
-            <li data-filter=".burger">Burger</li>
-            <li data-filter=".pizza">Pizza</li>
-            <li data-filter=".pasta">Pasta</li>
-            <li data-filter=".fries">Fries</li>
-         </ul> -->
 
          <div class="filters-content">
             <div class="row grid">
@@ -46,10 +39,13 @@ include 'db/koneksi.php';
                            <div class="detail-box">
                               <h5><?= $data['nama_bus'] ?></h5>
                               <p>
-                                 <?= $data['terminal_asal'] ?> Ke <?= $data['terminal_tujuan'] ?>
+                                 <?= $data['terminal_asal'] ?> ke <?= $data['terminal_tujuan'] ?>
                               </p>
                               <p>
-                                 Jumlah kursi tersisa : <?= $data['jumlah_kursi'] ?>
+                                 Jumlah kursi tersisa :  <?= $data['jumlah_kursi'] <= 0 ? 'Tidak ada kursi' : $data['jumlah_kursi'] ?>
+                              </p>
+                              <p>
+                                 Waktu Keberangkatan : <b> <?= $data['waktu_berangkat'] ?></b> 
                               </p>
                               <div class="options">
                                  <h6>Rp <?= number_format($data['harga'], 0, ',', '.')  ?></h6>

@@ -1,6 +1,6 @@
 <?php
 
-include '../db/koneksi.php';
+include 'C:/xampp/htdocs/Php-PemesananBus/db/koneksi.php';
 
 function select($table) 
 {
@@ -14,10 +14,10 @@ function select($table)
 function insert($table, $values)
 {
    global $conn;
-   // var_dump($conn);   
    $query = "INSERT INTO $table VALUES $values";
+   // var_dump($query);   
 
-   mysqli_query($conn, $query);
+   $result = mysqli_query($conn, $query);
    
    return mysqli_affected_rows($conn);
 
