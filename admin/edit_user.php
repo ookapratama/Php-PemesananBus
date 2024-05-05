@@ -63,6 +63,14 @@ $data = mysqli_fetch_assoc($datas);
                                        </div>
                                     </div>
                                  </div>
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <label for="">ALamat User</label>
+                                       <div class="form-group">
+                                          <input type="text" name="alamat" placeholder="Masukkan Password" class="form-control" value="<?= $data['password'] ?>" id="">
+                                       </div>
+                                    </div>
+                                 </div>
                                  <div class="d-flex">
                                     <div class=" mb-4 mr-3"><button type="submit" class="btn btn-success"> Update </button></div>
                                     <div class=" mb-4"><a class="btn btn-secondary" href="index_user.php"> Kembali </a></div>

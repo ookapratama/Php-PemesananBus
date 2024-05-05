@@ -1,16 +1,13 @@
 <?php
 include '../config/function.php';
 
-$id_user = $_POST['id_user'];
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$alamat = $_POST['alamat'];
+$id_test = $_POST['id_test'];
+$nama = $_POST['nama'];
 
 // var_dump($harga_bus);
 // var_dump(str_replace($harga_bus, '.'));
 
-if ($username == "" || $email == "" || $password == "") {
+if ($nama == "" ) {
    echo "<script>
       alert('lengkapi data')
       history.back();
@@ -18,13 +15,13 @@ if ($username == "" || $email == "" || $password == "") {
 }
 
 // echo $data_query;
-$data_query = "username = '$username' ,email = '$email' ,password = '$password', alamat = '$alamat' WHERE id_user = $id_user";
+$data_query = "nama = '$nama' WHERE id_test = $id_test";
 
-$store = update('user', $data_query);
+$store = update('test', $data_query);
 if ($store > 0) {
    echo "<script>
       alert('Berhasil update data');
-      document.location.href ='index_user.php';
+      document.location.href ='index_test.php';
       </script>";
 } else {
    echo "<script>

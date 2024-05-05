@@ -2,7 +2,7 @@
 include 'header.php';
 include '../db/koneksi.php';
 
-
+$menu  = "dashboard";
 
 ?>
 

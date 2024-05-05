@@ -1,15 +1,11 @@
 <?php
 include '../config/function.php';
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$alamat = $_POST['alamat'];
+$nama = $_POST['nama'];
 
-var_dump($_POST);
 // var_dump(str_replace($harga_bus, '.'));
 
-if ($username == "" || $email == "" || $password == "") {
+if ($nama == "") {
    echo "<script>
       alert('lengkapi data')
       history.back();
@@ -17,13 +13,13 @@ if ($username == "" || $email == "" || $password == "") {
 }
 
 // echo $data_query;
-$data_query = "(null, '$username' , '$email' ,'$password', '$alamat')";
-
-$store = insert('user', $data_query);
+$data_query = "(null, '$nama')";
+$store = insert('test', $data_query);
+var_dump($store);
 if ($store > 0) {
    echo "<script>
       alert('Berhasil tambah data');
-      document.location.href ='index_user.php';
+      document.location.href ='index_test.php';
       </script>";
 } else {
    echo "<script>

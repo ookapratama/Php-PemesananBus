@@ -3,6 +3,9 @@
 include 'header.php';
 include '../db/koneksi.php';
 include '../config/function.php';
+
+$menu = 'jadwal';
+echo $menu;
 ?>
 
 <body>
